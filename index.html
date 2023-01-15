@@ -10,105 +10,59 @@
 </head>
 
 <body>
-        <div class="form-input">
-            <h3>Thông tin sinh viên</h3>
-            <br>
-            <div class="form-information">
-                <label for="id">Mã số sinh viên:</label>
-                <input type="number" class="form-control" id="id">
-            </div>
-            <div class="form-information">
-                <label for="name">Họ và tên:</label>
-                <input type="text" class="form-control" id="name">
-            </div>
-            <div class="form-information">
-                <label for="email">Địa chỉ Email:</label>
-                <input type="email" class="form-control" id="email">
-            </div>
-            <div class="form-information">
-                <label for="phone">Số điện thoại:</label>
-                <input type="number" class="form-control" id="phone">
-            </div>
-            <div class="form-information">
-                <label for="address">Địa chỉ:</label>
-                <input type="text" class="form-control" id="address">
-            </div>
-            <div class="form-information">
-                <label for="class">Lớp:</label>
-                <select id="class" class="form-control">
-                    <option value="C1222i1">C1222i1</option>
-                    <option value="C1122i1">C1122i1</option>
-                    <option value="C1022i1">C1022i1</option>
-                    <option value="C922i1">C922i1</option>
-                </select>
-            </div>
-            <div class="form-information">
-                <label for="gender">Giới tính:</label>
-                <label><input name="gender" value="male" type="radio" checked /> Nam</label>
-                <label><input name="gender" value="female" type="radio" /> Nữ</label>
-            </div>
-            <div class="form-information">
-                <button class="btn-add" onclick="createcontrol()">Tạo thông tin</button>
-            </div>
+    <div class="form-input">
+        <h3>Thông tin sinh viên</h3>
+        <br>
+        <div class="form-information">
+            <label for="id">Mã số sinh viên:</label>
+            <input type="number" class="form-control" id="id">
         </div>
-        <div class="display-output">
-            <h3>Danh sách sinh viên</h3>
-            <br>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>MSSV</th>
-                        <th>Họ và tên</th>
-                        <th>Địa chỉ Email</th>
-                        <th>Số điện thoại</th>
-                        <th>Địa chỉ</th>
-                        <th>Giới tính</th>
-                        <th>Thao tác</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>18234</td>
-                        <td>Nguyễn Văn A</td>
-                        <td>nguyenvana@gmail.com</td>
-                        <td>0648375942</td>
-                        <td>32 Bùi Thị Xuân</td>
-                        <td>Nam</td>
-                        <td>
-                            <button class="btn-fix">Sửa</button>
-                            <button class="btn-delete">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>18235</td>
-                        <td>Trần Văn B</td>
-                        <td>tranvanb@gmail.com</td>
-                        <td>0648375942</td>
-                        <td>32 Bùi Thị Xuân</td>
-                        <td>Nam</td>
-                        <td>
-                            <button class="btn-fix">Sửa</button>
-                            <button class="btn-delete">Xóa</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>18234</td>
-                        <td>Nguyễn Thị C</td>
-                        <td>nguyenthic@gmail.com</td>
-                        <td>0648375942</td>
-                        <td>32 Bùi Thị Xuân</td>
-                        <td>Nữ</td>
-                        <td>
-                            <button class="btn-fix">Sửa</button>
-                            <button class="btn-delete">Xóa</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="form-information">
+            <label for="name">Họ và tên:</label>
+            <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-information">
+            <label for="email">Địa chỉ Email:</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-information">
+            <label for="phone">Số điện thoại:</label>
+            <input type="number" class="form-control" id="phone">
+        </div>
+        <div class="form-information">
+            <label for="address">Địa chỉ:</label>
+            <input type="text" class="form-control" id="address">
+        </div>
+        <div class="form-information">
+            <label for="gender">Giới tính:</label>
+            <select id="gender" class="form-control">
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+            </select>
+        </div>
+        <div class="form-information">
+            <button class="btn-add" onclick="createInformation()">Tạo thông tin</button>
+        </div>
+    </div>
+    <div class="display-output">
+        <h3>Danh sách sinh viên</h3>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>MSSV</th>
+                    <th>Họ và tên</th>
+                    <th>Địa chỉ Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Giới tính</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="addInformation">
+            </tbody>
+        </table>
     </div>
     <script src="student.js"></script>
 </body>
