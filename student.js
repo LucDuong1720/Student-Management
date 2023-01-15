@@ -1,0 +1,3 @@
+class Information {
+    constructor (mssv, )
+}
